@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  rp:
+    build: ./rp
+    ports:
+      - 3000:3000
+    depends_on:
+      - keycloak
+  keycloak:
+    build: ./keycloak
+    ports:
+      - 8080:8080
