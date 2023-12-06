@@ -20,14 +20,30 @@ import (
 
 var (
 	callbackPath = "/cb"
-	key = []byte("01234567890123456789012345678901")
+	key          = []byte("01234567890123456789012345678901")
 )
+
+func createOIDCClientWithRetry(ctx context.Context, issuer, clientID, clientSecret, redirectURI string, scopes []string, options ...rp.Option) (rp.RelyingParty, error) {
+	maxRetries := 5
+	retryInterval := time.Second * 5
+
+	for i := 0; i < maxRetries; i++ {
+		provider, err := rp.NewRelyingPartyOIDC(ctx, issuer, clientID, clientSecret, redirectURI, scopes, options...)
+		if err != nil {
+			logrus.Errorf("error creating oidc client: %v", err)
+			time.Sleep(retryInterval)
+			continue
+		}
+		return provider, nil
+	}
+	return nil, fmt.Errorf("failed to create oidc client after %d attempts", maxRetries)
+}
 
 func main() {
 	clientID := os.Getenv("CLIENT_ID")
 	clientSecret := os.Getenv("CLIENT_SECRET")
-	issuer := "https://accounts.google.com" 
-	port := "3000" 
+	issuer := "http://keycloak:8080/realms/demo"
+	port := "3000"
 	scopes := []string{oidc.ScopeOpenID, "profile", "email"}
 
 	redirectURI := fmt.Sprintf("http://localhost:%v%v", port, callbackPath)
@@ -50,7 +66,7 @@ func main() {
 	}
 
 	ctx := logging.ToContext(context.TODO(), logger)
-	provider, err := rp.NewRelyingPartyOIDC(ctx, issuer, clientID, clientSecret, redirectURI, scopes, options...)
+	provider, err := createOIDCClientWithRetry(ctx, issuer, clientID, clientSecret, redirectURI, scopes, options...)
 	if err != nil {
 		logrus.Fatalf("error creating oidc client: %v", err)
 	}

@@ -1,0 +1,46 @@
+{
+  "realm" : "master",
+  "users" : [ {
+    "id" : "1b9f9531-221b-4951-94d3-bc5b7d63947b",
+    "createdTimestamp" : 1701873710236,
+    "username" : "admin",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "credentials" : [ {
+      "id" : "14411359-6453-4f10-b5d6-e0fb71bb03f0",
+      "type" : "password",
+      "createdDate" : 1701873710333,
+      "secretData" : "{\"value\":\"ZzLFZ5l1Vq1AYYZRoBkuKOFS8PAa/Mt9cwJIe/5IDg4=\",\"salt\":\"DyWWx0aXV4ikJk8TIQQSAA==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\",\"additionalParameters\":{}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "admin", "default-roles-master" ],
+    "clientRoles" : {
+      "demo-realm" : [ "create-client", "query-groups", "view-realm", "view-authorization", "query-users", "manage-realm", "manage-events", "manage-identity-providers", "query-realms", "manage-authorization", "view-identity-providers", "view-events", "manage-users", "view-clients", "manage-clients", "view-users", "query-clients" ]
+    },
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "7eac570b-0fe8-4653-9ef7-8d53c5dbb66f",
+    "createdTimestamp" : 1701873784193,
+    "username" : "test",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "credentials" : [ {
+      "id" : "cadde5c6-745d-46fe-a16d-dac31aced1d8",
+      "type" : "password",
+      "userLabel" : "My password",
+      "createdDate" : 1701873799013,
+      "secretData" : "{\"value\":\"hV77ZuCJOvaQxO7cq7ib44ljSAGyszfXelJOsAIO734=\",\"salt\":\"wMfkdvOZLgynx9ka7qMbNw==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\",\"additionalParameters\":{}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-master" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  } ]
+}

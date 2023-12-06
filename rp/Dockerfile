@@ -11,7 +11,7 @@ RUN CGO_ENABLED=0 GOOS=linux go build -o /zitadel-oidc-example
 
 EXPOSE 3000
 
-ENV CLIENT_ID="<CLIENT ID>"
-ENV CLIENT_SECRET="<CLIENT SECRET>"
+ENV CLIENT_ID="myclient"
+ENV CLIENT_SECRET="1e3fpb2S0JDZ8TlQu3LfIyUIgKdJCxRK"
 
 CMD ["/zitadel-oidc-example"]

@@ -10,3 +10,5 @@ services:
     build: ./keycloak
     ports:
       - 8080:8080
+    volumes:
+      - ./keycloak/import:/opt/keycloak/data/import
