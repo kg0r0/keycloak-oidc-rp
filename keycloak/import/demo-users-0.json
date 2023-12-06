@@ -1,22 +1,15 @@
 {
   "realm" : "demo",
   "users" : [ {
-    "id" : "650f7971-2d61-4c60-9471-4bc113be6c2f",
-    "createdTimestamp" : 1701880223408,
+    "id" : "41b957a5-33ae-44d6-8ea7-1b423e8344ed",
+    "createdTimestamp" : 1701904955497,
     "username" : "test",
     "enabled" : true,
     "totp" : false,
     "emailVerified" : false,
-    "credentials" : [ {
-      "id" : "06c8ba65-c92f-43a8-a1d2-0c41cdbd8f0b",
-      "type" : "password",
-      "userLabel" : "My password",
-      "createdDate" : 1701880233306,
-      "secretData" : "{\"value\":\"tAywxyfODIKg0EVg8xI7j50sb6OQSR7GHuwzjRP9oF8=\",\"salt\":\"0qrGDOQ+dOukZkIh9Kf2MA==\",\"additionalParameters\":{}}",
-      "credentialData" : "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\",\"additionalParameters\":{}}"
-    } ],
+    "credentials" : [ ],
     "disableableCredentialTypes" : [ ],
-    "requiredActions" : [ ],
+    "requiredActions" : [ "webauthn-register-passwordless" ],
     "realmRoles" : [ "default-roles-demo" ],
     "notBefore" : 0,
     "groups" : [ ]

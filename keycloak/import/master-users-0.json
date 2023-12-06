@@ -22,25 +22,5 @@
     },
     "notBefore" : 0,
     "groups" : [ ]
-  }, {
-    "id" : "7eac570b-0fe8-4653-9ef7-8d53c5dbb66f",
-    "createdTimestamp" : 1701873784193,
-    "username" : "test",
-    "enabled" : true,
-    "totp" : false,
-    "emailVerified" : false,
-    "credentials" : [ {
-      "id" : "cadde5c6-745d-46fe-a16d-dac31aced1d8",
-      "type" : "password",
-      "userLabel" : "My password",
-      "createdDate" : 1701873799013,
-      "secretData" : "{\"value\":\"hV77ZuCJOvaQxO7cq7ib44ljSAGyszfXelJOsAIO734=\",\"salt\":\"wMfkdvOZLgynx9ka7qMbNw==\",\"additionalParameters\":{}}",
-      "credentialData" : "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\",\"additionalParameters\":{}}"
-    } ],
-    "disableableCredentialTypes" : [ ],
-    "requiredActions" : [ ],
-    "realmRoles" : [ "default-roles-master" ],
-    "notBefore" : 0,
-    "groups" : [ ]
   } ]
 }

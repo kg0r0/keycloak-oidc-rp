@@ -42,7 +42,7 @@ func createOIDCClientWithRetry(ctx context.Context, issuer, clientID, clientSecr
 func main() {
 	clientID := os.Getenv("CLIENT_ID")
 	clientSecret := os.Getenv("CLIENT_SECRET")
-	issuer := "http://keycloak:8080/realms/demo"
+	issuer := "http://localhost:8080/realms/demo"
 	port := "3000"
 	scopes := []string{oidc.ScopeOpenID, "profile", "email"}
 
