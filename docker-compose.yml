@@ -7,7 +7,7 @@ services:
     depends_on:
       - keycloak
     extra_hosts:
-      - localhost:x.x.x.x
+      - localhost:[YOUR_LOCAL_IP]
   keycloak:
     build: ./keycloak
     ports:

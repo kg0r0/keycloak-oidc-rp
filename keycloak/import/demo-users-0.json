@@ -7,7 +7,14 @@
     "enabled" : true,
     "totp" : false,
     "emailVerified" : false,
-    "credentials" : [ ],
+    "credentials" : [ {
+      "id" : "090f608b-27c8-4ff3-bae1-96f06da9c5d6",
+      "type" : "password",
+      "userLabel" : "My password",
+      "createdDate" : 1701959776863,
+      "secretData" : "{\"value\":\"ocAVlAyB9DpeRL8hXKr+0CSF/dPZs0cfuYnC4FKnW7s=\",\"salt\":\"cjexsTlqeQrCuCysPgy4mQ==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\",\"additionalParameters\":{}}"
+    } ],
     "disableableCredentialTypes" : [ ],
     "requiredActions" : [ "webauthn-register-passwordless" ],
     "realmRoles" : [ "default-roles-demo" ],
